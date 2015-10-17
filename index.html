@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="todo">
 <head>
   <title>To Do list in Angular JS</title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -7,12 +7,12 @@
 <body>
 
   <!-- App Container -->
-  <div id="todoapp">
+  <div id="todoapp" ng-controller="ToDoCtrl">
 
     <!-- Input Area -->
     <div id="addtask">
       <!-- Input Text box -->
-      <input type="text" name="add-task" class='add task' placeholder="Add your task here"/>
+      <input type="text" name="add-task" class='add task' placeholder="Add your task here" ng-model="taskName" ng-keyup="addTask()"/>
       <!-- Priority Selector -->
       <select>
           <option value='normal'>Normal</option>
@@ -23,7 +23,6 @@
 
     <!-- List Area -->
     <ul id="todo-list">
-
     </ul>
   </div>
   <!-- Our custom code script goes at the end of the body tag. -->
