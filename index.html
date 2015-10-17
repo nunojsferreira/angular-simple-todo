@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>To Do list in Angular JS</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js" async defer></script>
+</head>
+<body>
+
+  <!-- App Container -->
+  <div id="todoapp">
+
+    <!-- Input Area -->
+    <div id="addtask">
+      <!-- Input Text box -->
+      <input type="text" name="add-task" class='add task' placeholder="Add your task here"/>
+      <!-- Priority Selector -->
+      <select>
+          <option value='normal'>Normal</option>
+          <option value='medium'>Medium</option>
+          <option value='high'>High</option>
+      </select>
+    </div>
+
+    <!-- List Area -->
+    <ul id="todo-list">
+
+    </ul>
+  </div>
+  <!-- Our custom code script goes at the end of the body tag. -->
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
