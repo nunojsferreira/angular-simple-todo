@@ -4,11 +4,17 @@ angular.module('todo', [])
 
 .controller('ToDoCtrl', ['$scope', function($scope) {
     $scope.tasklist = [];
+    $scope.priority = 'normal';
 
     $scope.addTask = function() {
         if(event.keyCode == 13 && $scope.taskName) {
-            $scope.tasklist.push({"name": $scope.taskName});
+            $scope.tasklist.push({
+                "name": $scope.taskName,
+                "priority": $scope.priority,
+                "completed": false
+            });
             $scope.taskName = "";
+            $scope.priority = 'normal';
         }
     };
 

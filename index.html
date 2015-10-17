@@ -14,7 +14,7 @@
       <!-- Input Text box -->
       <input type="text" name="add-task" class='add task' placeholder="Add your task here" ng-model="taskName" ng-keyup="addTask()"/>
       <!-- Priority Selector -->
-      <select>
+      <select ng-model="priority">
           <option value='normal'>Normal</option>
           <option value='medium'>Medium</option>
           <option value='high'>High</option>
@@ -23,6 +23,10 @@
 
     <!-- List Area -->
     <ul id="todo-list">
+      <li ng-repeat="task in tasklist track by $index">
+          <input type="checkbox" name="checkbox" ng-model="task.completed"/>
+          <span>{{task.name}} ({{task.priority}})</span>
+      </li>
     </ul>
   </div>
   <!-- Our custom code script goes at the end of the body tag. -->
