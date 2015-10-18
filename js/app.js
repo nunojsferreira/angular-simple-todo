@@ -18,8 +18,8 @@ angular.module('todo', [])
         }
     };
 
-    $scope.deleteTask = function() {
-
+    $scope.deleteTask = function(index) {
+        $scope.tasklist.splice(index, 1);
     };
 
 }]);
